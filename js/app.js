@@ -1,8 +1,16 @@
+//通过浏览器的cookie获取当前语言
+var language = document.cookie.match(/language=([^;]+)/);
+var locale = 'zh-cn';
+if (language) {
+    locale = language[1].split('_')[0];
+}
+
 require.config({
     baseUrl: './js',
     paths: {
         'jquery': 'lib/jquery-2.1.1.min',
-        'text': './lib/text'
+        'text': './lib/text',
+        'i18n': './lib/i18n'
     },
     shim: {},
     // map: {
@@ -19,15 +27,20 @@ require.config({
             onXhr: function(xhr, url) {
                 xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             }
+        },
+        i18n: {
+            locale: locale
         }
     }
 });
 require([
     'jquery',
-    './app/api'
-], function($, api) {
+    './app/api',
+    'i18n!./nls/message'
+], function($, api, i18n) {
     //var str = helper.trim('   and    ');
     // console.log(str);
+    $('#user').after('<button>' + i18n.edit + '</button>');
     $('#user').on('click', function() {
         // api.getUser().then(function(user) {
         //     console.log(user);
