@@ -24,6 +24,11 @@ define([
                 console.log(user);
             });
 
+        },
+        loadUser: function() {
+            require(['text!../user.html!strip'], function(template) {
+                $('#userinfo').html(template);
+            });
         }
     }
 });
