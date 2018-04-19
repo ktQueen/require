@@ -3,7 +3,7 @@ require.config({
     paths: {
         'jquery': 'lib/jquery-2.1.1.min'
     },
-    urlArgs: "bust=" + (new Date()).getTime(), // 为方便开发调试加上时间戳避免缓存
+    shim: {},
     map: {
         'app/api': {
             'jquery': 'lib/jquery-2.1.1.min'
@@ -12,6 +12,7 @@ require.config({
             'jquery': 'lib/jquery-2.1.2.min'
         }
     },
+    urlArgs: "_=" + (new Date()).getTime(), // 为方便开发调试加上时间戳避免缓存
 });
 require([
     './app/api2'
