@@ -15,13 +15,16 @@ require.config({
     urlArgs: "_=" + (new Date()).getTime(), // 为方便开发调试加上时间戳避免缓存
 });
 require([
-    './app/api2'
+    './app/api'
 ], function(api) {
     //var str = helper.trim('   and    ');
     // console.log(str);
-    // $('#user').on('click', function() {
-    //     api.getUser().then(function(user) {
-    //         console.log(user);
-    //     });
-    // });
+    $('#user').on('click', function() {
+        // api.getUser().then(function(user) {
+        //     console.log(user);
+        // });
+        api.getUserByJsonp().then(function(user) {
+            console.log(user);
+        });
+    });
 });
