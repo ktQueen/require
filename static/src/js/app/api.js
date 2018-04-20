@@ -26,7 +26,7 @@ define([
 
         },
         loadUser: function() {
-            require(['text!../user.html!strip'], function(template) {
+            require(['text!../../../templates/user.html!strip'], function(template) {
                 $('#userinfo').html(template);
             });
         }

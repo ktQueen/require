@@ -1,0 +1,1 @@
+define("helper",["jquery"],function(e){return console.log("helper"),{trim:function(r){return e.trim(r)}}});

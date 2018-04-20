@@ -1,0 +1,9 @@
+
+js/app.js
+----------------
+js/jquery.js
+js/app/api.js
+js/i18n.js
+js/nls/message.js
+i18n!nls/message
+js/app.js

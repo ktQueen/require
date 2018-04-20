@@ -1,0 +1,1 @@
+define(["jquery"],function(e){return{getUser:function(){var r=e.Deferred();return require(["./app/user"],function(e){r.resolve(e)}),r},getUserByJsonp:function(){require(["请求地址"],function(e){console.log(e)})},loadUser:function(){require(["text!../../../templates/user.html!strip"],function(r){e("#userinfo").html(r)})}}});
