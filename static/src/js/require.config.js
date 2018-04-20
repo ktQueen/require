@@ -8,9 +8,9 @@ if (language) {
 require.config({
     baseUrl: '../static/src/js',
     paths: {
-        'jquery': 'lib/jquery',
-        'text': 'lib/text',
-        'i18n': 'lib/i18n'
+        'jquery': './lib/jquery',
+        'text': './lib/text',
+        'i18n': './lib/i18n'
     },
     shim: {},
     // map: {
