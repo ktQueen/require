@@ -1,0 +1,19 @@
+{
+    "name": "require",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "package": "node static/r.js -o static/app.build.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ktQueen/require.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ktQueen/require/issues"
+    },
+    "homepage": "https://github.com/ktQueen/require#readme"
+}
