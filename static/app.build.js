@@ -5,6 +5,7 @@
     optimize: 'uglify', //不打包-none
     mainConfig: 'src/js/require.config',
     //name: 'app'
+    inlineText: false, //模板打包，true-模块文件就会和app一起打包，false-文本文件就会作为一个额外的请求
     modules: [{
             name: 'app',
             //exclude: ['jquery'],//去掉这个文件相关的所有依赖文件

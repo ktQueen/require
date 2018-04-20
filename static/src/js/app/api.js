@@ -1,6 +1,7 @@
 define([
-    'jquery'
-], function($) {
+    'jquery',
+    'text!../../../templates/user.html!strip'
+], function($, template) {
     return {
         getUser: function() {
             var def = $.Deferred();
@@ -26,9 +27,10 @@ define([
 
         },
         loadUser: function() {
-            require(['text!../../../templates/user.html!strip'], function(template) {
-                $('#userinfo').html(template);
-            });
+            // require(['text!../../../templates/user.html!strip'], function(template) {
+            //     $('#userinfo').html(template);
+            // });
+            $('#userinfo').html(template);
         }
     }
 });

@@ -2,6 +2,8 @@
 js/app.js
 ----------------
 js/jquery.js
+js/text.js
+text!../../../templates/user.html!strip
 js/app/api.js
 js/i18n.js
 js/nls/message.js
